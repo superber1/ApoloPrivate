@@ -2,10 +2,12 @@
 import random
 import matplotlib.pyplot as plt
 
+class Particle:
+    def __init__(self, position) -> None:
+        self.position = position
 
 
 def random_walk(num_steps, prob_right, num_particles):
-
     
 
 
