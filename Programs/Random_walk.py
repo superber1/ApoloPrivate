@@ -64,6 +64,6 @@ def createplot(num_steps, particle_paths):
 
 num_steps = 100
 prob_right = 0.5
-num_particles = 15
+num_particles = 10
 
 random_walk(num_steps, prob_right, num_particles)
