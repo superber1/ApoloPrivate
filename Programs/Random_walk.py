@@ -29,9 +29,9 @@ def random_walk(num_steps, prob_right, num_particles):
         particles_list.append(new_particle(start_list))
         i += 1
 
-    for x in num_steps:
+    for x in range(num_steps):
         for y in particles_list:
-            prob = random()
+            prob = random.random()
             if(prob > prob_right):
                 y.travel(-1)
             else:
