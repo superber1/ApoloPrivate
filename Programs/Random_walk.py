@@ -3,13 +3,24 @@ import random
 import matplotlib.pyplot as plt
 
 class Particle:
-    def __init__(self, position) -> None:
-        self.position = position
+    def __init__(self, position: int) -> None:
+        self._position = position
+
+    def set_position(self, pos):
+        self.position = pos
+
+
+def new_particle():
+    return Particle(0)
 
 
 def random_walk(num_steps, prob_right, num_particles):
     
 
+    for x in range(num_particles):
+        pass
+
+    
 
     createplot(num_steps, particle_paths)
     
