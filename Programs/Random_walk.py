@@ -7,13 +7,13 @@ class Particle:
         self._position = position
 
     def get_position(self):
-        return self.position
+        return self._position
 
     def set_position(self, pos:list):
-        self.position = pos
+        self._position = pos
 
     def travel(self, path:int):
-        self.position.append(self.position[len(self.position)] + path)
+        self._position.append(self._position[len(self._position) - 1] + path)
 
 
 def new_particle(pos):
@@ -42,6 +42,7 @@ def random_walk(num_steps, prob_right, num_particles):
     for particle in particles_list:
         particle_paths.append(particle.get_position())
     
+    print(particle_paths)
 
     createplot(num_steps, particle_paths)
     
@@ -58,8 +59,8 @@ def createplot(num_steps, particle_paths):
     plt.ylabel("Time")
     plt.show()
 
-num_steps = 2
+num_steps = 5
 prob_right = 0.5
-num_particles = 2
+num_particles = 5
 
 random_walk(num_steps, prob_right, num_particles)
