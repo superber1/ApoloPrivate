@@ -27,6 +27,7 @@ def random_walk(num_steps, prob_right, num_particles):
     i = 0
     while i < num_particles:
         particles_list.append(new_particle(start_list))
+        i += 1
 
     for x in num_steps:
         for y in particles_list:
@@ -57,8 +58,8 @@ def createplot(num_steps, particle_paths):
     plt.ylabel("Time")
     plt.show()
 
-num_steps = 100
+num_steps = 2
 prob_right = 0.5
-num_particles = 10
+num_particles = 2
 
 random_walk(num_steps, prob_right, num_particles)
