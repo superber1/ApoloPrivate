@@ -1,4 +1,3 @@
-
 import pygame
 import sys
 import random
@@ -28,7 +27,7 @@ class Particle:
         self.color
         self.speed
         self.angle
-        self.is_tracer
+        self.is_tracer = is_tracer
         self.path
 
     def move(self):
